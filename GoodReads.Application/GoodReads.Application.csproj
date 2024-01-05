@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.9.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.0" />
+    <PackageReference Include="MediatR" Version="12.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Books\Commands\Handlers\" />
+    <Folder Include="Books\Models\" />
+    <Folder Include="Books\Profiles\" />
+    <Folder Include="Books\Queries\Handlers\" />
+    <Folder Include="Books\Validators\" />
+    <Folder Include="Ratings\Commands\Handlers\" />
+    <Folder Include="Ratings\Models\" />
+    <Folder Include="Ratings\Profiles\" />
+    <Folder Include="Ratings\Queries\Handlers\" />
+    <Folder Include="Ratings\Validators\" />
+    <Folder Include="Users\Commands\Handlers\" />
+    <Folder Include="Users\Models\" />
+    <Folder Include="Users\Profiles\" />
+    <Folder Include="Users\Queries\Handlers\" />
+    <Folder Include="Users\Validators\" />
+  </ItemGroup>
+
+</Project>
