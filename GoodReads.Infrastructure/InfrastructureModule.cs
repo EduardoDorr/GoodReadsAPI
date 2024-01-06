@@ -1,8 +1,10 @@
-﻿using GoodReads.Infrastructure.Data;
-
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+
+using GoodReads.Domain.Interfaces;
+using GoodReads.Infrastructure.Data;
+using GoodReads.Infrastructure.Repositories;
 
 namespace GoodReads.Infrastructure;
 
@@ -18,9 +20,9 @@ public static class InfrastructureModule
 
     private static IServiceCollection AddRepositories(this IServiceCollection services)
     {
-        //services.AddTransient<IDonorRepository, DonorRepository>();
-        //services.AddTransient<IDonationRepository, DonationRepository>();
-        //services.AddTransient<IBloodStorageRepository, BloodStorageRepository>();
+        services.AddTransient<IUserRepository, UserRepository>();
+        services.AddTransient<IBookRepository, BookRepository>();
+        services.AddTransient<IRatingRepository, RatingRepository>();
 
         return services;
     }

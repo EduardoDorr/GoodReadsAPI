@@ -8,9 +8,7 @@ public sealed class Email : BaseValueObject
 
     private const string _pattern = @"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$";
 
-    protected Email()
-    {
-    }
+    protected Email() { }
 
     public Email(string address)
     {
