@@ -1,4 +1,6 @@
-﻿namespace GoodReads.Tests.Utils;
+﻿using GoodReads.Domain.Books;
+
+namespace GoodReads.Tests.Utils;
 
 internal static class BookUtils
 {
@@ -9,7 +11,7 @@ internal static class BookUtils
                         "1594872315946",
                         "Test Author",
                         "Test Publisher",
-                        BookGender.Mystery,
+                        BookGenre.Mystery,
                         2000,
                         350,
                         "sdflkijhfsia978346r5owaf");

@@ -1,5 +1,4 @@
-﻿using GoodReads.Domain.Enums;
-using GoodReads.Domain.Entities;
+﻿using GoodReads.Domain.Books;
 
 namespace GoodReads.Domain.Builders;
 
@@ -10,7 +9,7 @@ public class BookBuilder
     private string _description;
     private string _author;
     private string _publisher;
-    private BookGender _gender;
+    private BookGenre _gender;
     private int _publicationYear;
     private int _printLength;
     private string _coverImage;
@@ -44,7 +43,7 @@ public class BookBuilder
         return this;
     }
 
-    public BookBuilder WithGender(BookGender bookGender)
+    public BookBuilder WithGender(BookGenre bookGender)
     {
         _gender = bookGender;
         return this;

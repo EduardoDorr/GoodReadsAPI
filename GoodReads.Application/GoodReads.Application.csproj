@@ -17,19 +17,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Books\Commands\Handlers\" />
-    <Folder Include="Books\Models\" />
-    <Folder Include="Books\Profiles\" />
-    <Folder Include="Books\Queries\Handlers\" />
-    <Folder Include="Books\Validators\" />
-    <Folder Include="Ratings\Commands\Handlers\" />
-    <Folder Include="Ratings\Profiles\" />
-    <Folder Include="Ratings\Queries\Handlers\" />
-    <Folder Include="Ratings\Validators\" />
-    <Folder Include="Users\Queries\Handlers\" />
+    <Folder Include="Ratings\DeleteRating\" />
+    <Folder Include="Ratings\UpdateRating\" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GoodReads.Core\GoodReads.Core.csproj" />
     <ProjectReference Include="..\GoodReads.Domain\GoodReads.Domain.csproj" />
   </ItemGroup>
 

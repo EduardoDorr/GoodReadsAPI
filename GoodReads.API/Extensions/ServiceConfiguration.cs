@@ -2,6 +2,7 @@
 
 using Microsoft.OpenApi.Models;
 
+using GoodReads.API.Middlewares;
 using GoodReads.Application;
 using GoodReads.Infrastructure;
 
@@ -12,7 +13,11 @@ public static class ServiceConfiguration
     public static WebApplicationBuilder ConfigureServices(this WebApplicationBuilder builder)
     {
         builder.Services.AddInfrastructure(builder.Configuration)
-                        .AddApplication();
+                        .AddApplication()
+                        .AddDomain();
+
+        builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+        builder.Services.AddProblemDetails();
 
         builder.Services.AddControllers().AddJsonOptions(options =>
         {

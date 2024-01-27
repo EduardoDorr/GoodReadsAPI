@@ -27,4 +27,8 @@
     <ProjectReference Include="..\GoodReads.Domain\GoodReads.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Auth\" />
+  </ItemGroup>
+
 </Project>

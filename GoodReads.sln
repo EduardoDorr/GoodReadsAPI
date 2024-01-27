@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoodReads.API", "GoodReads.API\GoodReads.API.csproj", "{F32D5433-6AF7-41F7-B537-CCF4742A5D6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoodReads.API", "GoodReads.API\GoodReads.API.csproj", "{F32D5433-6AF7-41F7-B537-CCF4742A5D6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoodReads.Application", "GoodReads.Application\GoodReads.Application.csproj", "{62A55F20-D3B3-4700-8F79-11F0B6EE9032}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoodReads.Application", "GoodReads.Application\GoodReads.Application.csproj", "{62A55F20-D3B3-4700-8F79-11F0B6EE9032}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoodReads.Domain", "GoodReads.Domain\GoodReads.Domain.csproj", "{B64C4CB9-BD11-4F21-960B-DCC859B7567A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoodReads.Domain", "GoodReads.Domain\GoodReads.Domain.csproj", "{B64C4CB9-BD11-4F21-960B-DCC859B7567A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoodReads.Infrastructure", "GoodReads.Infrastructure\GoodReads.Infrastructure.csproj", "{8BE3FFEF-021D-402C-A652-26675CB4FFD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoodReads.Infrastructure", "GoodReads.Infrastructure\GoodReads.Infrastructure.csproj", "{8BE3FFEF-021D-402C-A652-26675CB4FFD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoodReads.Tests", "GoodReads.Tests\GoodReads.Tests.csproj", "{01EA6974-26D1-40C2-A967-296D1AFE08BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoodReads.Tests", "GoodReads.Tests\GoodReads.Tests.csproj", "{01EA6974-26D1-40C2-A967-296D1AFE08BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoodReads.Core", "GoodReads.Core\GoodReads.Core.csproj", "{742F8F2B-CEAF-46D9-90B5-D6E745FD6826}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{01EA6974-26D1-40C2-A967-296D1AFE08BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01EA6974-26D1-40C2-A967-296D1AFE08BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01EA6974-26D1-40C2-A967-296D1AFE08BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{742F8F2B-CEAF-46D9-90B5-D6E745FD6826}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{742F8F2B-CEAF-46D9-90B5-D6E745FD6826}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{742F8F2B-CEAF-46D9-90B5-D6E745FD6826}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{742F8F2B-CEAF-46D9-90B5-D6E745FD6826}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,8 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace BloodBank.Domain.ValueObjects;
+using GoodReads.Core.ValueObjects;
+
+namespace GoodReads.Domain.ValueObjects;
 
 public sealed class Email : BaseValueObject
 {

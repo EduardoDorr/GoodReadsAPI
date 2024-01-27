@@ -1,0 +1,5 @@
+﻿@GoodReads.API_HostAddress = https://localhost:7027
+
+GET {{GoodReads.API_HostAddress}}/api/v1/users/1
+
+###

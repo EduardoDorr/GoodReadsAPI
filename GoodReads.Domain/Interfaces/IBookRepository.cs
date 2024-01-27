@@ -1,8 +1,9 @@
-﻿using GoodReads.Domain.Entities;
+﻿using GoodReads.Core.Interfaces;
+using GoodReads.Domain.Books;
 
 namespace GoodReads.Domain.Interfaces;
 
-public interface IBookRepository : IBaseRepository<Book>
+public interface IBookRepository : IReadableRepository<Book>, ICreatableRepository<Book>, IUpdatableRepository<Book>, IDeletableRepository<Book>
 {
     Task<Book?> GetWithRatingsByIdAsync(int id);
 }

@@ -1,0 +1,11 @@
+﻿@GoodReads.API_HostAddress = https://localhost:7027
+
+POST {{GoodReads.API_HostAddress}}/api/v1/users
+Content-Type: application/json
+
+{
+  "name": "Mara Dossena",
+  "email": "mara.dossena@mail.com"
+}
+
+###
