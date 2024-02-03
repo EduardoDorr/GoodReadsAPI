@@ -6,6 +6,9 @@ using GoodReads.Core.Interfaces;
 using GoodReads.Domain.Interfaces;
 using GoodReads.Infrastructure.Persistences.Data;
 using GoodReads.Infrastructure.Persistences.Repositories;
+using Refit;
+using GoodReads.Infrastructure.BooksGateway.GoogleBooksApi;
+using GoodReads.Application.ExternalBooksApi.Interfaces;
 
 namespace GoodReads.Infrastructure;
 
@@ -15,7 +18,8 @@ public static class InfrastructureModule
     {
         services.AddDbContexts(configuration)
                 .AddRepositories()
-                .AddUnitOfWork();
+                .AddUnitOfWork()
+                .AddRefit();
 
         return services;
     }
@@ -42,6 +46,17 @@ public static class InfrastructureModule
     private static IServiceCollection AddUnitOfWork(this IServiceCollection services)
     {
         services.AddTransient<IUnitOfWork, UnitOfWork>();
+
+        return services;
+    }
+
+    private static IServiceCollection AddRefit(this IServiceCollection services)
+    {
+        services
+            .AddRefitClient<IGoogleBooksApi>()
+            .ConfigureHttpClient(c => c.BaseAddress = new Uri("https://www.googleapis.com"));
+
+        services.AddTransient<IExternalBookApi, GoogleBooksApi>();
 
         return services;
     }
