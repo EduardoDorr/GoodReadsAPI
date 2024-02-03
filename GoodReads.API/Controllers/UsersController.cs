@@ -9,6 +9,8 @@ using GoodReads.Application.Users.GetUsers;
 using GoodReads.Application.Users.CreateUser;
 using GoodReads.Application.Users.UpdateUser;
 using GoodReads.Application.Users.DeleteUser;
+using GoodReads.Application.Users.GetUserWithRatings;
+using GoodReads.Application.Reports.GetBooksReadyByUserInPeriod;
 
 namespace GoodReads.API.Controllers;
 
@@ -37,6 +39,30 @@ public class UsersController : ControllerBase
     public async Task<IActionResult> GetById(int id)
     {
         var query = new GetUserQuery(id);
+
+        var result = await _mediator.Send(query);
+
+        return result.Match(
+            onSuccess: Ok,
+            onFailure: this.GetResult);
+    }
+
+    [HttpGet("{id}/ratings")]
+    public async Task<IActionResult> GetByIdWithRatings(int id)
+    {
+        var query = new GetUserWithRatingsQuery(id);
+
+        var result = await _mediator.Send(query);
+
+        return result.Match(
+            onSuccess: Ok,
+            onFailure: this.GetResult);
+    }
+
+    [HttpGet("{id}/books-read")]
+    public async Task<IActionResult> GetByIdWithRatings(int id, DateTime startDate, DateTime finishDate)
+    {
+        var query = new GetBooksReadByUserInPeriodQuery(id, startDate, finishDate);
 
         var result = await _mediator.Send(query);
 

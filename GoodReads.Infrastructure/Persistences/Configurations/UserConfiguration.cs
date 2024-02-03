@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
 using GoodReads.Domain.Users;
 
 namespace GoodReads.Infrastructure.Persistences.Configurations;

@@ -1,5 +1,5 @@
 ﻿using GoodReads.Domain.Books;
-using GoodReads.Domain.Ratings;
+using GoodReads.Application.Ratings.Models;
 
 namespace GoodReads.Application.Books.Models;
 
@@ -15,5 +15,5 @@ public record BookWithRatingsViewModel(
     int PrintLength,
     decimal AverageRating,
     string CoverImage,
-    ICollection<Rating> Ratings,
+    ICollection<RatingViewModel> Ratings,
     bool Active);

@@ -1,9 +1,10 @@
 ﻿using System.Reflection;
 
 using Microsoft.EntityFrameworkCore;
+
 using GoodReads.Domain.Books;
-using GoodReads.Domain.Ratings;
 using GoodReads.Domain.Users;
+using GoodReads.Domain.Ratings;
 
 namespace GoodReads.Infrastructure.Persistences.Data;
 

@@ -32,7 +32,7 @@ internal class DeleteUserCommandHandler : IRequestHandler<DeleteUserCommand, Res
 
         _userRepository.Update(user);
 
-        var updated = await _unitOfWork.SaveChangesAsync() > 0;
+        var updated = await _unitOfWork.SaveChangesAsync(cancellationToken) > 0;
 
         if (!updated)
             return Result.Fail(UserErrors.CannotBeDeleted);

@@ -9,6 +9,7 @@ using GoodReads.Application.Books.GetBooks;
 using GoodReads.Application.Books.CreateBook;
 using GoodReads.Application.Books.DeleteBook;
 using GoodReads.Application.Books.UpdateBooks;
+using GoodReads.Application.Books.GetBookWithRatings;
 
 namespace GoodReads.API.Controllers
 {
@@ -37,6 +38,18 @@ namespace GoodReads.API.Controllers
         public async Task<IActionResult> GetById(int id)
         {
             var query = new GetBookQuery(id);
+
+            var result = await _mediator.Send(query);
+
+            return result.Match(
+            onSuccess: Ok,
+            onFailure: this.GetResult);
+        }
+
+        [HttpGet("{id}/ratings")]
+        public async Task<IActionResult> GetByIdWithRatings(int id)
+        {
+            var query = new GetBookWithRatingsQuery(id);
 
             var result = await _mediator.Send(query);
 

@@ -29,23 +29,31 @@ public class UserRepository : IUserRepository
         return await _dbContext.Users.SingleOrDefaultAsync(u => u.Id == id);
     }
 
-    public Task<User?> GetWithRatingsByIdAsync(int id)
+    public async Task<User?> GetWithRatingsByIdAsync(int id)
     {
-        throw new NotImplementedException();
+        return await _dbContext.Users.Include(u => u.Ratings).SingleOrDefaultAsync(u => u.Id == id);
     }
 
-    public void Create(User entity)
+    public async Task<User?> GetWithRatingsInPeriodByIdAsync(int id, DateTime startDate, DateTime finishDate)
     {
-        _dbContext.Users.Add(entity);
+        return await _dbContext.Users
+            .Include(u => u.Ratings.Where(r => r.StartDate >= startDate &&
+                                               r.FinishDate <= finishDate))
+            .SingleOrDefaultAsync(u => u.Id == id);
     }
 
-    public void Update(User entity)
+    public void Create(User user)
     {
-        _dbContext.Users.Update(entity);
+        _dbContext.Users.Add(user);
     }
 
-    public void Delete(User entity)
+    public void Update(User user)
     {
-        _dbContext.Users.Remove(entity);
+        _dbContext.Users.Update(user);
+    }
+
+    public void Delete(User user)
+    {
+        _dbContext.Users.Remove(user);
     }
 }

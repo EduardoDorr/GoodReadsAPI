@@ -17,11 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Ratings\DeleteRating\" />
-    <Folder Include="Ratings\UpdateRating\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\GoodReads.Core\GoodReads.Core.csproj" />
     <ProjectReference Include="..\GoodReads.Domain\GoodReads.Domain.csproj" />
   </ItemGroup>

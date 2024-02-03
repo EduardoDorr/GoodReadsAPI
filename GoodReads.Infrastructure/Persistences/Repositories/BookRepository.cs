@@ -26,12 +26,12 @@ public class BookRepository : IBookRepository
 
     public async Task<Book?> GetByIdAsync(int id)
     {
-        return await _dbContext.Books.SingleOrDefaultAsync(book => book.Id == id);
+        return await _dbContext.Books.SingleOrDefaultAsync(b => b.Id == id);
     }
 
-    public Task<Book?> GetWithRatingsByIdAsync(int id)
+    public async Task<Book?> GetWithRatingsByIdAsync(int id)
     {
-        throw new NotImplementedException();
+        return await _dbContext.Books.Include(b => b.Ratings).SingleOrDefaultAsync(b => b.Id == id);
     }
 
     public void Create(Book book)
